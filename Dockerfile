@@ -25,6 +25,7 @@ WORKDIR $CATALINA_HOME
 #
 RUN \
 apt-get update; \
+apt-get install -y --no-install-recommends apt-utils ; \
 apt-get install -y --no-install-recommends mg vim rsync cron ;
 #
 
