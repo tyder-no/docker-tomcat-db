@@ -1,0 +1,8 @@
+#!/bin/sh 
+
+rsync -axu /webapps/* /usr/local/tomcat/webapps
+rsync -axu /conf/* /usr/local/tomcat/conf
+#rsync -axu /lib/* /usr/local/tomcat/lib
+cp -a /tclib/*.jar /usr/local/tomcat/lib
+
+[ -d /usr/local/tomcat/apphome ] || ln -s /apphome  /usr/local/tomcat/apphome
